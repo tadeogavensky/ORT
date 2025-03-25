@@ -1,0 +1,51 @@
+{
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.sideBar.location": "left",
+    "files.autoSave": "afterDelay",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "tailwind-fold.autoFold": true,
+    "terminal.integrated.env.windows": {},
+    "explorer.confirmDelete": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "prisma.showPrismaDataPlatformNotification": false,
+    "terminal.integrated.env.osx": {},
+    "console-ninja.featureSet": "Community",
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Hyper Term Black",
+    "workbench.iconTheme": "vscode-icons",
+    "[mdx]": {
+        "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+    },
+    "editor.tabSize": 8,
+    "window.commandCenter": true,
+    "editor.fontSize": 16,
+    "security.promptForLocalFileProtocolHandling": false,
+    "prettier.configPath": "/Users/tadeogavensky/Desktop/your-voice-nh/.prettierrc.json",
+    "editor.wordWrapColumn": 70
+}
