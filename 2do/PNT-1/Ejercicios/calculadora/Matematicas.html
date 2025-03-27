@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="calc-container">
+      <h1>Calculadora</h1>
+
+      <table>
+        <tr>
+          <td class="input-container">
+            <label>Valor 1</label>
+            <input type="text" id="valor1" />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="input-container">
+            <label>Valor 2</label>
+            <input type="text" id="valor2" />
+          </td>
+        </tr>
+        <tr>
+          <td class="btn-container">
+            <button id="sumar">Sumar</button>
+            <button id="restar">Restar</button>
+            <button id="multiplicar">Multiplicar</button>
+            <button id="dividir">Dividir</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="resultado-container">
+            <label for="resultado">Resultado</label>
+            <input type="text" id="resultado" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td class="valores-container">
+            <div class="valores-container-item">
+              <label for="" id="cantidad">Cantidad</label>
+              <p id="cantidad-valor"></p>
+            </div>
+            <div class="valores-container-item">
+              <label for="" id="acumulado">Acumulado</label>
+              <p id="acumulado-valor"></p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  h1 {
+    color: black;
+    font-weight: bold;
+  }
+
+  label {
+    color: black;
+    font-weight: bold;
+  }
+
+  p {
+    color: black;
+    font-weight: bold;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 12px 8px;
+    background-color: black;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    transition: all 300ms ease-in-out;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: blue;
+    cursor: pointer;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+
+  input {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    width: 90%;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .resultado-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .calc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  .valores-container {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .valores-container-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+</style>
+
+<script>
+  let cantidad = 0;
+  let acumulado = 0;
+
+  let cantidadValor = document.getElementById("cantidad-valor");
+  let acumuladoValor = document.getElementById("acumulado-valor");
+
+  let btnSumar = document.getElementById("sumar");
+  let btnRestar = document.getElementById("restar");
+  let btnMultiplicar = document.getElementById("multiplicar");
+  let btnDividir = document.getElementById("dividir");
+
+  function sumar(numero1, numero2) {
+    let resultado = numero1 + numero2;
+    cantidad++;
+    acumulado += resultado;
+    return resultado;
+  }
+  function restar(numero1, numero2) {
+    let resultado = numero1 - numero2;
+    cantidad++;
+    acumulado += resultado;
+    return resultado;
+  }
+  function multiplicar(numero1, numero2) {
+    let resultado = numero1 * numero2;
+    cantidad++;
+    acumulado += resultado;
+    return resultado;
+  }
+  function dividir(numero1, numero2) {
+    if (numero2 === 0) {
+      return "No se puede dividir por cero";
+    }
+    let resultado = numero1 / numero2;
+    cantidad++;
+    acumulado += resultado;
+    return resultado;
+  }
+
+  const onClick = (operacion) => {
+    let valor1 = document.getElementById("valor1").value;
+    let valor2 = document.getElementById("valor2").value;
+    let resultado = document.getElementById("resultado");
+
+    if (valor1 === "" || valor2 === "") {
+      resultado.value = "Por favor, ingrese ambos valores";
+      return;
+    }
+
+    if (isNaN(valor1) || isNaN(valor2)) {
+      resultado.value = "Por favor, ingrese valores numéricos";
+      return;
+    }
+
+    switch (operacion) {
+      case "sumar":
+        resultado.value = sumar(parseInt(valor1), parseInt(valor2));
+        break;
+      case "restar":
+        resultado.value = restar(parseInt(valor1), parseInt(valor2));
+        break;
+      case "multiplicar":
+        resultado.value = multiplicar(parseInt(valor1), parseInt(valor2));
+        break;
+      case "dividir":
+        resultado.value = dividir(parseInt(valor1), parseInt(valor2));
+      default:
+        resultado.value = "Operación no válida";
+    }
+
+    cantidadValor.textContent = cantidad;
+    acumuladoValor.textContent = acumulado;
+  };
+
+  btnSumar.addEventListener("click", () => onClick("sumar"));
+  btnRestar.addEventListener("click", () => onClick("restar"));
+  btnMultiplicar.addEventListener("click", () => onClick("multiplicar"));
+  btnDividir.addEventListener("click", () => onClick("dividir"));
+</script>
