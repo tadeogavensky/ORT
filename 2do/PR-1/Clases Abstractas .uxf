@@ -1,0 +1,16 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLClass</id><coordinates><x>329</x><y>77</y><w>147</w><h>126</h></coordinates><panel_attributes>/SerVivo/
+-
+- edad: int
+
+/+ mostrarFormaDeComunicarse()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>371</x><y>476</y><w>77</w><h>42</h></coordinates><panel_attributes>Flecha de herencia</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>441</x><y>7</y><w>112</w><h>49</h></coordinates><panel_attributes>Clase abstracta</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>476</x><y>301</y><w>147</w><h>133</h></coordinates><panel_attributes>Persona
+-
+-
++ mostrarFormaDeComunicarse()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>119</x><y>532</y><w>133</w><h>84</h></coordinates><panel_attributes>Insecto
+-
+-
++ mostrarFormaDeComunicarse()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>343</x><y>532</y><w>140</w><h>84</h></coordinates><panel_attributes>Vertebrado
+-
+-
++ mostrarFormaDeComunicarse()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>203</x><y>301</y><w>147</w><h>133</h></coordinates><panel_attributes>Animal
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>266</x><y>427</y><w>161</w><h>119</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110;210;110;210;150</additional_attributes></element><element><id>Relation</id><coordinates><x>147</x><y>427</y><w>140</w><h>119</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;10;180;110;10;110;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>392</x><y>196</y><w>168</w><h>119</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110;220;110;220;150</additional_attributes></element><element><id>Relation</id><coordinates><x>266</x><y>196</y><w>147</w><h>119</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>190;10;190;110;10;110;10;150</additional_attributes></element></diagram>
